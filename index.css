@@ -1,1 +1,248 @@
 /* Le code CSS spécifique à la page d'accueil */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mitr:wght@200;300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+html {
+  height: 100%;
+  width: 100%;
+ 
+ 
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: "Mitr", sans-serif;
+
+}
+ 
+:root {
+  --Dark-Amethyst: #240046;
+  --bleu-sarcelle: #048BA8;
+  --bleu-nuit: #01202B;
+  --blanc: #FFF;
+
+
+}
+
+/* NAVBAR */
+nav {
+  height: 80px;
+  background: linear-gradient(to right, var(--bleu-nuit), var(--bleu-sarcelle));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+ 
+.logo {
+  color: green ;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+nav img{
+    width: 200px;
+    
+}
+
+ 
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+ 
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
+}
+ 
+/* HEADER */
+header {
+  
+   background-image: url('asset/Egg_Head_Anime_Infobox.webp');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   
+
+   height: 92vh;
+
+}
+header img{
+    width: 20vw;
+    margin-right: 10vh;
+
+}
+
+.hero {
+
+  
+  display: flex;
+   flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 15vh;
+}
+ 
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+ 
+.hero p {
+  margin-top: 10px;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+ 
+ 
+.section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+ 
+.content h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+ 
+.content p,
+.content span {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+ 
+ 
+/* CONTEXTE */
+.contexte {
+  background: #048BA8;
+}
+ 
+.contexte h2 {
+  color: var(--blanc);
+}
+ 
+.contexte p {
+  color: #8a00ff;
+}
+ 
+/* CIBLES */
+
+.section.contexte .content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+
+.sticky-feature {
+  
+  position: sticky;
+  height: 100vh; 
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+
+#Fonctionnalites-1 {
+  background-color: var(--bleu-nuit);
+  border-radius: 5%;
+  top: 10vh;
+  margin: 24px;
+}
+
+#Fonctionnalites-2 {
+  background-color: var(--Dark-Amethyst);
+  border-radius: 5%;
+  top: 13vh;
+  margin: 24px;
+}
+
+#Fonctionnalites-3 {
+  background-color: var(--bleu-nuit);
+  border-radius: 5%;
+  top: 16vh;
+  margin: 24px;
+}
+
+
+.feature-text {
+  flex: 1;
+  max-width: 500px;
+}
+
+.feature-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.feature-img img {
+  max-height: 70vh;
+  width: auto;
+  border-radius: 8px;
+}
+ ----------------------------------------------------------------------
+/* EVOLUTIONS */
+.evolutions {
+  background: black;
+}
+ 
+.evolutions h2,
+.evolutions p {
+  color: white;
+}
+ 
+ 
+/* AVENIR */
+ 
+.avenir {
+  min-height: 100vh;
+  background: #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+ 
+.avenir h2,
+.avenir p {
+  color: #8a00ff;
+}
+ 
+/* FOOTER */
+ 
+footer {
+  height: 180px;
+  background: linear-gradient(to right, var(--bleu-nuit), var(--bleu-sarcelle));
+  border: 4px solid #2196f3;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+ 
+.footer-content h2 {
+  color: white;
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+ 
+.footer-content p {
+  color: white;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
