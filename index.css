@@ -119,6 +119,8 @@ header img{
   font-size: 1rem;
   text-transform: uppercase;
 }
+
+
  
  
 /* CONTEXTE */
@@ -131,12 +133,12 @@ header img{
 }
  
 .contexte p {
-  color: #8a00ff;
+  color: #00ff04;
 }
  
 /* CIBLES */
 
-.section.contexte .content {
+.section.contexte .conteneur {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -150,8 +152,9 @@ header img{
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 2rem;
+  padding: 24px;
   box-sizing: border-box;
+  width: 50vw;
 }
 
 
@@ -160,6 +163,7 @@ header img{
   border-radius: 5%;
   top: 10vh;
   margin: 24px;
+  
 }
 
 #Fonctionnalites-2 {
@@ -177,23 +181,108 @@ header img{
 }
 
 
-.feature-text {
+.conteneur-text {
   flex: 1;
   max-width: 500px;
 }
 
-.feature-img {
+.conteneur-img {
   flex: 1;
   display: flex;
   justify-content: center;
 }
 
-.feature-img img {
+.conteneur-img img {
   max-height: 70vh;
   width: auto;
-  border-radius: 8px;
+
 }
- ----------------------------------------------------------------------
+ 
+
+/* --- LE CONTENEUR GLOBAL --- */
+#Temoignages h1{
+  text-align: center;
+}
+
+
+.container-global {
+  display: flex !important; /* Le !important force Flexbox si un autre code le bloquait */
+  flex-wrap: wrap;
+  justify-content: center; /* Centre les éléments, notamment le 3ème sur sa ligne */
+  gap: 4%; /* Espace de 4% entre les cartes */
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+}
+
+/* --- LE STYLE DES ARTICLES --- */
+.container-global article {
+  /* On force chaque article à prendre un peu moins de la moitié (48%) 
+     Comme 48% + 48% + 4% (gap) = 100%, le 3ème est obligé de passer en dessous */
+  width: 48%; 
+  box-sizing: border-box; /* Évite que le padding déforme la largeur */
+  
+  background-color: #c71111;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* --- LE TROISIÈME ARTICLE --- */
+.container-global article.article-tiers {
+  /* Il garde la même largeur (48%) pour avoir la même taille que les autres, 
+     mais comme il est tout seul sur sa ligne, il se centrera automatiquement */
+  width: 48%; 
+  margin: 30px;
+}
+
+
+
+/* --- LE RESTE DU STYLE (IMAGE + TEXTE) --- */
+.container-global article p {
+  font-style: italic;
+  line-height: 1.6;
+  color: #000000;
+  margin-bottom: 25px;
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.avatar {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.Deplacement h4 {
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.Deplacement h6 {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+
+
+
+
+
+
+
+
 /* EVOLUTIONS */
 .evolutions {
   background: black;
@@ -201,7 +290,7 @@ header img{
  
 .evolutions h2,
 .evolutions p {
-  color: white;
+  color: rgb(45, 21, 21);
 }
  
  
