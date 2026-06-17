@@ -51,6 +51,8 @@ body {
         text-decoration: none;
         color: white;
         font-size: 0.9rem;
+        background-color: #000;
+        border-radius: 2000px;
     }
 
     /* HEADER */
@@ -68,10 +70,24 @@ body {
     }
 
     .hero h1 {
-        font-size: 4rem;
+        position: absolute;
+        font-size: 3rem;
+        margin-top: 40px;
+        margin-left: 162px;
         font-weight: 900;
         text-transform: uppercase;
     }
+
+    #ImgBloc {
+        position: relative;
+    }
+
+    .button {
+        color: black;
+        background-color: #048BA8;
+        border-radius: 62px;
+    }
+
 
     .hero p {
         margin-top: 10px;
@@ -101,6 +117,10 @@ body {
     }
 
 
+
+
+
+
     /* CONTEXTE */
     .contexte {
         background: var(--bleu-sarcelle);
@@ -115,19 +135,92 @@ body {
     }
 
     /* CIBLES */
-    .cibles {
-        background: #f4f4f4;
+    .section.pour-qui {
+        text-align: center;
+        background-color: #4b8ca3;
+        padding: 60px 0;
     }
 
-    .cibles h2,
-    .cibles span,
-    .cibles p {
-        color: black;
+    .section.pour-qui h2 {
+        font-size: 40px;
+        font-weight: 900;
+        color: #000;
+        margin-bottom: 40px;
+        margin-right: 160px;
     }
 
-    /* EVOLUTIONS */
+    .persona .cards {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        background-color: #3a7b8c;
+        color: #000;
+        border-radius: 15px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        padding: 25px;
+        width: 300px;
+        text-align: left;
+    }
+
+
+    .card {
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        width: 350px;
+        text-align: center;
+        overflow: hidden;
+        margin: 40px auto;
+    }
+
+    .texte {
+        padding: 20px;
+        font-size: 18px;
+        font-weight: 700;
+        color: #000;
+    }
+
+    .photo img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 20px;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+
+    .card {
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        width: 250px;
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .card h3 {
+        color: #222;
+        font-weight: 600;
+    }
+
+    /*-------- EVOLUTIONS--------------- */
     .evolutions {
-        background: black;
+        background: var(--bleu-nuit);
     }
 
     .evolutions h2,
@@ -136,7 +229,7 @@ body {
     }
 
 
-    /* AVENIR */
+    /* ------AVENIR------- */
 
     .avenir {
         min-height: 100vh;
@@ -148,11 +241,17 @@ body {
     }
 
     .avenir h2,
-    .avenir p {
+    h3 .avenir p {
         color: #8a00ff;
     }
 
-    /* FOOTER */
+    .section h3 {
+        color: white;
+
+    }
+
+
+    /* ------FOOTER------ */
 
     footer {
         height: 180px;
@@ -180,23 +279,86 @@ body {
 }
 
 
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
 
-.cards-section {
+
+
+
+
+
+
+
+
+
+/*------CIBLES 2------*/
+
+.section.cibles {
     display: flex;
-    justify-content: center;
-    /* centre horizontalement */
-    gap: 20px;
-    /* espace entre les cards */
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    padding: 40px 0;
 }
 
-.card {
-    width: 250px;
-    padding: 50px;
-    background: var(--bleu-sarcelle);
+/* Texte en haut centré */
+.section.cibles .content {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.section.cibles .content h2 {
+    font-size: 60px;
+    font-weight: 900;
+    margin: 0;
+    color: #000;
+}
+
+.section.cibles .content span {
+    display: block;
+    font-size: 50px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.section.cibles .content p {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+    color: #000;
+}
+
+/* Cartes en ligne centrées */
+.section.cibles .cards-container {
+    display: flex;
+    flex-direction: row;
+    /* ⬅️ ICI : en ligne */
+    justify-content: center;
+    /* centrage horizontal */
+    align-items: center;
+    /* centrage vertical */
+    gap: 30px;
+    flex-grow: 1;
+}
+
+.section.cibles .card {
+    background-color: #2e7a8c;
+    color: #fff;
+    padding: 30px;
     border-radius: 10px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 60px;
+}
+
+.section.cibles .card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+
+.section.cibles .card p {
+    font-size: 16px;
+    line-height: 1.4;
 }
