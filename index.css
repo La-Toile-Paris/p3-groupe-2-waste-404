@@ -199,29 +199,28 @@ header img{
 }
  
 
-/* --- LE CONTENEUR GLOBAL --- */
+/* Temoignagnes */
 #Temoignages h1{
   text-align: center;
 }
 
 
 .container-global {
-  display: flex !important; /* Le !important force Flexbox si un autre code le bloquait */
+  display: flex !important; 
   flex-wrap: wrap;
-  justify-content: center; /* Centre les éléments, notamment le 3ème sur sa ligne */
-  gap: 4%; /* Espace de 4% entre les cartes */
+  justify-content: center; 
+  gap: 4%; 
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
   height: 100vh;
 }
 
-/* --- LE STYLE DES ARTICLES --- */
+
 .container-global article {
-  /* On force chaque article à prendre un peu moins de la moitié (48%) 
-     Comme 48% + 48% + 4% (gap) = 100%, le 3ème est obligé de passer en dessous */
+  
   width: 48%; 
-  box-sizing: border-box; /* Évite que le padding déforme la largeur */
+  box-sizing: border-box; 
   
   background-color: #c71111;
   padding: 30px;
@@ -232,17 +231,13 @@ header img{
   justify-content: space-between;
 }
 
-/* --- LE TROISIÈME ARTICLE --- */
+/* troisieme article */
 .container-global article.article-tiers {
-  /* Il garde la même largeur (48%) pour avoir la même taille que les autres, 
-     mais comme il est tout seul sur sa ligne, il se centrera automatiquement */
   width: 48%; 
   margin: 30px;
 }
 
 
-
-/* --- LE RESTE DU STYLE (IMAGE + TEXTE) --- */
 .container-global article p {
   font-style: italic;
   line-height: 1.6;
