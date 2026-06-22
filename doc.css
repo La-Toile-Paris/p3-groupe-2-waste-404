@@ -1,1 +1,364 @@
 /* Le code CSS spécifique à la page de documentation */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mitr:wght@200;300;400;500;600;700&display=swap');
+
+
+
+html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: "Mitr", sans-serif;
+
+}
+
+
+
+:root {
+    --Dark-Amethyst: #240046;
+    --bleu-sarcelle: #048BA8;
+    --bleu-nuit: #01202B;
+    --blanc: #FFF;
+
+
+
+    /* NAVBAR */
+    nav {
+        height: 80px;
+        background: linear-gradient(to right, var(--bleu-nuit), var(--bleu-sarcelle));
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 40px;
+    }
+
+    .logo {
+        color: white, ;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 30px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-size: 0.9rem;
+        background-color: #000;
+        border-radius: 2000px;
+    }
+
+    /* HEADER */
+    header {
+        height: calc(100vh - 80px);
+        background: var(--bleu-nuit);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero {
+        text-align: center;
+        color: var(--bleu-sarcelle);
+    }
+
+    .hero h1 {
+        position: absolute;
+        font-size: 3rem;
+        margin-top: 40px;
+        margin-left: 162px;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    #ImgBloc {
+        position: relative;
+    }
+
+    .button {
+        color: black;
+        background-color: #048BA8;
+        border-radius: 62px;
+    }
+
+
+    .hero p {
+        margin-top: 10px;
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+
+
+    .section {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .content h2 {
+        font-size: 3rem;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    .content p,
+    .content span {
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+
+
+
+
+
+
+    /* CONTEXTE */
+    .contexte {
+        background: var(--bleu-sarcelle);
+    }
+
+    .contexte h2 {
+        color: var(--Dark-Amethyst);
+    }
+
+    .contexte p {
+        color: #8a00ff;
+    }
+
+    /* CIBLES */
+    .section.pour-qui {
+        text-align: center;
+        background-color: #4b8ca3;
+        padding: 60px 0;
+    }
+
+    .section.pour-qui h2 {
+        font-size: 40px;
+        font-weight: 900;
+        color: #000;
+        margin-bottom: 40px;
+        margin-right: 160px;
+    }
+
+    .persona .cards {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        background-color: #3a7b8c;
+        color: #000;
+        border-radius: 15px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        padding: 25px;
+        width: 300px;
+        text-align: left;
+    }
+
+
+    .card {
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        width: 350px;
+        text-align: center;
+        overflow: hidden;
+        margin: 40px auto;
+    }
+
+    .texte {
+        padding: 20px;
+        font-size: 18px;
+        font-weight: 700;
+        color: #000;
+    }
+
+    .photo img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 20px;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+
+    .card {
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        width: 250px;
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .card h3 {
+        color: #222;
+        font-weight: 600;
+    }
+
+    /*-------- EVOLUTIONS--------------- */
+    .evolutions {
+        background: var(--bleu-nuit);
+    }
+
+    .evolutions h2,
+    .evolutions p {
+        color: white;
+    }
+
+
+    /* ------AVENIR------- */
+
+    .avenir {
+        min-height: 100vh;
+        background: #d9d9d9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .avenir h2,
+    h3 .avenir p {
+        color: #8a00ff;
+    }
+
+    .section h3 {
+        color: white;
+
+    }
+
+
+    /* ------FOOTER------ */
+
+    footer {
+        height: 180px;
+        background: linear-gradient(to right, var(--bleu-nuit), var(--bleu-sarcelle));
+        border: 4px solid #2196f3;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-content h2 {
+        color: white;
+        font-size: 3rem;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    .footer-content p {
+        color: black;
+        margin-top: 10px;
+        text-transform: uppercase;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*------CIBLES 2------*/
+
+.section.cibles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    padding: 40px 0;
+}
+
+/* Texte en haut centré */
+.section.cibles .content {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.section.cibles .content h2 {
+    font-size: 60px;
+    font-weight: 900;
+    margin: 0;
+    color: #000;
+}
+
+.section.cibles .content span {
+    display: block;
+    font-size: 50px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.section.cibles .content p {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+    color: #000;
+}
+
+/* Cartes en ligne centrées */
+.section.cibles .cards-container {
+    display: flex;
+    flex-direction: row;
+    /* ⬅️ ICI : en ligne */
+    justify-content: center;
+    /* centrage horizontal */
+    align-items: center;
+    /* centrage vertical */
+    gap: 30px;
+    flex-grow: 1;
+}
+
+.section.cibles .card {
+    background-color: #2e7a8c;
+    color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 60px;
+}
+
+.section.cibles .card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+
+.section.cibles .card p {
+    font-size: 16px;
+    line-height: 1.4;
+}
