@@ -58,6 +58,7 @@ nav img{
   color: white;
   font-size: 0.9rem;
 }
+
  
 /* HEADER */
 header {
@@ -68,7 +69,7 @@ header {
    background-position: center;
    
 
-   height: 92vh;
+   height: 100vh;
 
 }
 header img{
@@ -120,8 +121,38 @@ header img{
   text-transform: uppercase;
 }
 
+/*Contexte*/
 
- 
+#Contexte{
+  height: 100vh;
+  background-color: var(--bleu-nuit);
+}
+
+#Contexte h1{
+  margin: 0px;
+  text-align: center;
+}
+
+#Contexte img{
+  width: 650px;
+  padding: 46px;
+}
+
+ .container-glo{
+  
+  display: flex;
+ }
+
+ .context-text{
+  color: var(--blanc);
+  
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px;
+  font-size: medium;
+ }
  
 /* Fonctionnalités */
 
@@ -134,7 +165,7 @@ header img{
 }
  
 .contexte p {
-  color: var(--Dark-Amethyst);
+  color: var(--blanc);
 }
  
 
