@@ -12,77 +12,210 @@
 
 <body>
 
-  <nav>
-    <div class="logo"><img src="asset/Gemini_Generated_Image_myd6kqmyd6kqmyd6-removebg-preview.png"></div>
-
-    <div class="nav-links">
-      <a href="#">Documentation</a>
-      <a href="#">TELECHARGER</a>
+  <nav class="main-nav">
+    <a href="#accueil" class="nav-logo">
+      <img src="asset/Waste_404LogoNav.png" alt="Waste 404">
+    </a>
+    <div class="nav-actions">
+      <a href="doc.html" class="nav-link">Documentation</a>
+      <a target="_blank" href="https://www.figma.com/proto/Yg1JPnP7CUxEsBsc0eBv6f/WASTE-404?node-id=6352-3486&t=ItSNBShxPA9ElTEq-1" class="nav-cta">Télécharger</a>
     </div>
   </nav>
-  <header>
+
+  <header id="accueil">
     <div class="hero">
-      <img src="asset/BlackTel.png">
-      <div>
-        <h1></h1>
-        <p></p>
+      <img class="hero-edison" src="asset/edison.png" alt="Edison">
+      <div class="hero-right">
+        <div class="hero-title">
+          <h1>RIEN NE SE PERD<br>TOUT SE SCAN</h1>
+        </div>
+        <img class="hero-bot" src="asset/2.png" alt="">
       </div>
     </div>
   </header>
-  <main>
+    <section id="Fonctionnalites" class="section fonctionnalites">
+      <div class="conteneur">
+    <h1>Fonctionnalités</h1>
+    <div class="sticky-feature feature-card feature-card--nuit">
+      <div class="conteneur-text">
+        <div class="feature-title">
+          <h2>Scan</h2>
+        </div>
+        <div class="feature-description">
+          <p>Identifier les matériaux en un instant</p>
+          <p>Analyser leur état et leur qualité</p>
+          <p>Ajouter automatiquement les objets à votre inventaire</p>
+        </div>
+      </div>
+      <div class="conteneur-img">
+        <img src="asset/Fonctionnalités1.png" alt="Scan">
+      </div>
+    </div>
 
-    <section class="section contexte">
-      <div class="content">
+    <div class="sticky-feature feature-card feature-card--sarcelle">
+      <div class="conteneur-text">
+        <div class="feature-title">
+          <h2>Craft</h2>
+        </div>
+        <div class="feature-description">
+          <p>Combiner les éléments de votre inventaire</p>
+          <p>Créer de nouveaux objets à partir de vos ressources</p>
+          <p>Donner une seconde vie aux matériaux collectés</p>
+        </div>
+      </div>
+      <div class="conteneur-img">
+        <img src="asset/Fonctionnalités2.png" alt="Craft">
+      </div>
+    </div>
 
-        <div id="Fonctionnalites-1" class="sticky-feature">
-          <div class="feature-text">
-            <h2>Fonctionnalité 1</h2>
-            <p>Scan</p>
-          </div>
-          <div class="feature-img">
-            <img src="asset/Fonctionnalités1.png" alt="Demo 1">
+    <div class="sticky-feature feature-card feature-card--nuit">
+      <div class="conteneur-text">
+        <div class="feature-title">
+          <h2>Vendre</h2>
+        </div>
+        <div class="feature-description">
+          <p>Mettre en vente les objets scannés d'origine</p>
+          <p>Vendre aussi ce que vous avez crafté</p>
+          <p>Trouver des acheteurs pour vos créations</p>
+        </div>
+      </div>
+      <div class="conteneur-img">
+        <img src="asset/Fonctionnalités3.png" alt="Vendre">
+      </div>
+    </div>
+
+  </div>
+</section>
+ 
+    <section id="Temoignages">
+      <div class="testimonials-scroll">
+        <div class="testimonials-sticky">
+          <h1>Témoignages</h1>
+          <div class="testimonials-track">
+            <article>
+                <div class="testimonial-text">
+                    <p>J'ai scanné une vieille étagère et l'app a identifié le bois et son état en quelques secondes. Fini les objets oubliés au fond du garage !</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-photo">
+                        <img class="avatar" src="asset/premium_photo-1689551671541-31a345ce6ae0.avif" alt="Julien">
+                    </div>
+                    <div class="Deplacement">
+                        <h4>Julia</h4>
+                        <h6>Bricoleuse du dimanche</h6>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="testimonial-text">
+                    <p>Grâce au craft, j'ai transformé des matériaux que je comptais jeter en une lampe unique. Waste404 donne vraiment une seconde vie aux objets.</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-photo">
+                        <img class="avatar" src="asset/13088655163825555.jpg" alt="Amélie">
+                    </div>
+                    <div class="Deplacement">
+                        <h4>Amélie</h4>
+                        <h6>Passionnée d'upcycling</h6>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="testimonial-text">
+                    <p>J'ai revendu des objets scannés dont je ne me servais plus, puis une création craftée. Tout est fluide, de l'inventaire à la mise en vente.</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-photo">
+                        <img class="avatar" src="asset/RequinCertif.png" alt="Lucas">
+                    </div>
+                    <div class="Deplacement">
+                        <h4>Lucas</h4>
+                        <h6>Vendeur occasionnel</h6>
+                    </div>
+                </div>
+            </article>
           </div>
         </div>
-
-        <div id="Fonctionnalites-2" class="sticky-feature">
-          <div class="feature-text">
-            <h2>Fonctionnalité 2</h2>
-            <p>Craft</p>
-          </div>
-          <div class="feature-img">
-            <img src="asset/Fonctionnalités2.png" alt="Demo 2">
-          </div>
+      </div>
+    </section>
+ 
+    <section id="download-section">
+    <div class="download-container">
+        
+        <div class="download-image">
+            <img src="asset/FinalAccueil.png" alt="Waste404">
         </div>
 
-        <div id="Fonctionnalites-3" class="sticky-feature">
-          <div class="feature-text">
-            <h2>Fonctionnalité 3</h2>
-            <p>Vendre</p>
-          </div>
-          <div class="feature-img">
-            <img src="asset/Fonctionnalités3.png" alt="Demo 3">
-          </div>
+        <div class="download-content">
+            <h2>Téléchargez l'application Waste404</h2>
+            <p>Découvrez une nouvelle expérience fluide et optimisée directement sur votre smartphone. Téléchargez gratuitement notre application dès maintenant et rejoignez l'aventure.</p>
+            
+            <div class="download-buttons">
+                <a href="#" class="btn-store">
+                    <img src="asset/icon-app.png" alt="Télécharger dans l'App Store">
+                </a>
+
+                <a href="#" class="btn-store">
+                    <img src="asset/icon-google-play.png" alt="Disponible sur Google Play">
+                </a>
+            </div>
         </div>
 
-      </div>
-    </section>
+    </div>
+</section>
 
-    <section class="section cibles">
-      <div class="content">
-        <h2>>Témoignages</h2>
-        <span>&</span>
-        <p>Impact</p>
-      </div>
-    </section>
 
-    <section class="section evolutions">
-      <div class="content">
-        <h2>Download</h2>
-        <p>contacter</p>
-      </div>
-    </section>
+<section id="team-section">
+    <div class="team-container">
+        <h3 id="team-title">L'équipe derrière Waste404</h3>
+        
+        <div class="team-grid">
 
-  </main>
+            <div class="team-card">
+                <div class="testimonial-photo team-photo">
+                    <img src="asset/87c9657e01e92c40a8dbd4ad7228b043_400x400.png" alt="Hakime" class="avatar">
+                </div>
+                <h4>Hakime</h4>
+                <p class="team-role">Dev web</p>
+            </div>
+
+            <div class="team-card">
+                <div class="testimonial-photo team-photo">
+                    <img src="asset/couvsiteluffy.png" alt="Mohamed" class="avatar">
+                </div>
+                <h4>Mohamed</h4>
+                <p class="team-role">Dev web esprit kaizen</p>
+            </div>
+
+            <div class="team-card">
+                <div class="testimonial-photo team-photo">
+                    <img src="asset/Gemini_Generated_Image_l7ln7l7ln7l7ln7l.png" alt="Serigne" class="avatar">
+                </div>
+                <h4>Serigne</h4>
+                <p class="team-role">Tech lead</p>
+            </div>
+
+            <div class="team-card">
+                <div class="testimonial-photo team-photo">
+                    <img src="asset/5418462046432047.jpg" alt="Ydriss" class="avatar">
+                </div>
+                <h4>Ydriss</h4>
+                <p class="team-role">Designer</p>
+            </div>
+
+            <div class="team-card">
+                <div class="testimonial-photo team-photo">
+                    <img src="asset/Error_404.png" alt="Anis" class="avatar">
+                </div>
+                <h4>Anis</h4>
+                <p class="team-role">errror</p>
+            </div>
+            
+        </div>
+    </div>
+</section>
+ 
+  
   <footer>
     <div class="footer-content">
       <h2>Contact</h2>
