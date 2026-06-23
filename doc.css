@@ -56,66 +56,37 @@ body {
     }
 
     /* HEADER */
-    header {
-        height: calc(100vh - 80px);
-        background: var(--bleu-nuit);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+
+    #Contexte {
+        height: 100vh;
+        background-color: var(--bleu-nuit);
     }
 
-    .hero {
-        text-align: center;
-        color: var(--bleu-sarcelle);
-    }
-
-    .hero h1 {
-        position: absolute;
-        font-size: 3rem;
-        margin-top: 40px;
-        margin-left: 162px;
-        font-weight: 900;
-        text-transform: uppercase;
-    }
-
-    #ImgBloc {
-        position: relative;
-    }
-
-    .button {
-        color: black;
-        background-color: #048BA8;
-        border-radius: 62px;
-    }
-
-
-    .hero p {
-        margin-top: 10px;
-        font-size: 1rem;
-        text-transform: uppercase;
-    }
-
-
-    .section {
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    #Contexte h1 {
+        margin: 0px;
         text-align: center;
     }
 
-    .content h2 {
-        font-size: 3rem;
-        font-weight: 900;
-        text-transform: uppercase;
+    #Contexte img {
+        width: 650px;
+        padding: 46px;
     }
 
-    .content p,
-    .content span {
-        font-size: 1rem;
-        text-transform: uppercase;
+    .container-glo {
+
+        display: flex;
     }
 
+    .context-text {
+        color: var(--blanc);
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 8px;
+        padding: 24px;
+        font-size: medium;
+    }
 
 
 
