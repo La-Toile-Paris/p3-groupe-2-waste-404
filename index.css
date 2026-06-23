@@ -148,6 +148,7 @@ header {
 .hero-title {
   background: url('Bloc-Phrase-Header.png') no-repeat center / contain;
   display: inline-flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: min(960px, 92vw);
@@ -163,6 +164,15 @@ header {
   text-align: center;
   line-height: 1.15;
   color: var(--bleu-nuit);
+  span {
+    color: var(--bleu-sarcelle);
+  }
+}
+
+.hero-title h2 {
+  color: var(--bleu-nuit);
+  text-transform: uppercase;
+
 }
  
 .hero p {
@@ -192,38 +202,69 @@ header {
   text-transform: uppercase;
 }
 
-/*Contexte*/
+/* Contexte */
 
-#Contexte{
+#Contexte {
   height: var(--section-height);
   background-color: var(--bleu-nuit);
+  box-sizing: border-box;
 }
 
-#Contexte h1{
-  margin: 0px;
-  text-align: center;
+#Contexte h1 {
+  margin: 0;
+  text-align: left;
+  color: var(--cyan-neon);
+  font-size: clamp(2rem, 4vw, 3rem);
+  text-transform: uppercase;
 }
 
-#Contexte img{
-  width: 650px;
-  padding: 46px;
-}
-
- .container-glo{
-  
-  display: flex;
- }
-
- .context-text{
-  color: var(--blanc);
-  
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 8px;
+#Contexte img {
+  width: min(650px, 42vw);
+  max-height: calc(var(--section-height) - 80px);
+  object-fit: contain;
   padding: 24px;
-  font-size: medium;
- }
+}
+
+.container-glo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.context-text {
+  color: var(--blanc);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 560px;
+  text-align: left;
+  line-height: 1.65;
+}
+
+.context-text p {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 300;
+}
+
+.context-lead {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--cyan-neon);
+}
+
+.context-tagline {
+  font-style: italic;
+  opacity: 0.9;
+  padding-top: 8px;
+  border-top: 1px solid rgba(0, 229, 255, 0.25);
+}
  
 .fonctionnalites .conteneur > h1,
 #Temoignages h1 {
@@ -237,27 +278,6 @@ header {
 }
 
 /* Fonctionnalités */
-
-.contexte {
-  background: var(--Dark-Amethyst);
-}
- 
-.contexte h2 {
-  color: var(--blanc);
-}
- 
-.contexte p {
-  color: var(--blanc);
-}
- 
-
-.section.contexte .conteneur {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  height: var(--section-height);
-}
-
 
 .fonctionnalites .sticky-feature {
   position: sticky;
@@ -370,7 +390,7 @@ header {
 }
 
 .testimonials-track {
-  --card-width: min(70vw, 480px);
+  --card-width: min(80vw,650px);
   display: flex;
   flex-wrap: nowrap;
   gap: 5vw;
@@ -396,18 +416,26 @@ header {
   width: 100%;
   aspect-ratio: 429 / 196;
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  padding: 36px 44px 48px;
+  gap: 16px;
+  padding: 28px 36px 36px 28px;
   box-sizing: border-box;
+}
+
+.testimonial-text .testimonial-photo {
+  width: 200px;
+  height: 159px;
 }
 
 .testimonial-text p {
   margin: 0;
+  flex: 1;
   font-style: italic;
-  line-height: 1.6;
+  line-height: 1.5;
+  font-size: 0.95rem;
   color: var(--blanc);
-  text-align: center;
+  text-align: left;
 }
 
 .testimonial-author {
