@@ -1,7 +1,4 @@
 /* Le code CSS spécifique à la page de documentation */
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mitr:wght@200;300;400;500;600;700&display=swap');
-
-
 
 html {
     height: 100%;
@@ -12,7 +9,7 @@ html {
 
 body {
     margin: 0;
-    font-family: "Mitr", sans-serif;
+    font-family: var(--font-title);
 
 }
 
@@ -78,7 +75,6 @@ nav img{
         font-size: 3rem;
         margin-top: 40px;
         margin-left: 162px;
-        font-weight: 900;
         text-transform: uppercase;
     }
 
@@ -110,7 +106,6 @@ nav img{
 
     .content h2 {
         font-size: 3rem;
-        font-weight: 900;
         text-transform: uppercase;
     }
 
@@ -170,7 +165,6 @@ nav img{
 
     .section.pour-qui h2 {
         font-size: 40px;
-        font-weight: 900;
         color: #000;
         margin-bottom: 40px;
         margin-right: 160px;
@@ -242,7 +236,6 @@ nav img{
 
     .card h3 {
         color: #222;
-        font-weight: 600;
     }
 
     /*-------- EVOLUTIONS--------------- */
@@ -294,7 +287,6 @@ nav img{
     .footer-content h2 {
         color: white;
         font-size: 3rem;
-        font-weight: 900;
         text-transform: uppercase;
     }
 
@@ -323,7 +315,7 @@ nav img{
     flex-direction: column;
     align-items: center;
     background-color: #f9f9f9;
-    font-family: 'Arial', sans-serif;
+    font-family: var(--font-title);
     min-height: 100vh;
     padding: 40px 0;
 }
@@ -336,7 +328,6 @@ nav img{
 
 .section.cibles .content h2 {
     font-size: 60px;
-    font-weight: 900;
     margin: 0;
     color: #000;
 }
@@ -344,13 +335,13 @@ nav img{
 .section.cibles .content span {
     display: block;
     font-size: 50px;
-    font-weight: 700;
+    font-weight: var(--font-title-weight-semibold);
     margin: 10px 0;
 }
 
 .section.cibles .content p {
     font-size: 28px;
-    font-weight: 600;
+    font-weight: var(--font-title-weight-medium);
     margin: 0;
     color: #000;
 }
@@ -381,7 +372,6 @@ nav img{
 
 .section.cibles .card h3 {
     font-size: 20px;
-    font-weight: 700;
     margin-bottom: 60px;
 }
 

@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@400;500;600&display=swap');
+
+:root {
+  --font-title: "Mitr", sans-serif;
+  --font-title-weight-medium: 500;
+  --font-title-weight-semibold: 600;
+}
+
+h1,
+h2 {
+  font-family: var(--font-title);
+  font-weight: var(--font-title-weight-semibold);
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-title);
+  font-weight: var(--font-title-weight-medium);
+}

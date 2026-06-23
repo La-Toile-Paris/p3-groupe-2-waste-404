@@ -1,19 +1,16 @@
 /* Le code CSS spécifique à la page d'accueil */
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mitr:wght@200;300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-
 html {
   height: 100%;
   width: 100%;
- 
- 
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 
 body{
     padding: 0;
     margin: 0;
-    font-family: "Mitr", sans-serif;
+    font-family: var(--font-title);
 
 }
  
@@ -22,41 +19,82 @@ body{
   --bleu-sarcelle: #048BA8;
   --bleu-nuit: #01202B;
   --blanc: #FFF;
-
-
+  --cyan-neon: #00E5FF;
 }
 
 /* NAVBAR */
-nav {
-  height: 80px;
-  background: linear-gradient(to right, var(--bleu-nuit), var(--bleu-sarcelle));
+.main-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 72px;
+  background: rgba(1, 32, 43, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(0, 229, 255, 0.25);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35), 0 1px 0 rgba(0, 229, 255, 0.08);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px;
-}
- 
-.logo {
-   
-  font-size: 32px;
-  font-weight: bold;
+  padding: 0 48px;
+  box-sizing: border-box;
 }
 
-nav img{
-    width: 200px;
-    
-}
-
- 
-.nav-links {
+.nav-logo {
   display: flex;
-  gap: 30px;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
 }
- 
-.nav-links a {
+
+.nav-logo img {
+  width: 160px;
+  height: auto;
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+.nav-logo:hover img {
+  filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.5));
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+}
+
+.nav-link {
   text-decoration: none;
   color: white;
   font-size: 0.9rem;
+  transition: opacity 0.25s ease;
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+}
+
+.nav-cta {
+  text-decoration: none;
+  color: var(--blanc);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 10px 28px;
+  border: 1px solid var(--cyan-neon);
+  background: rgba(0, 229, 255, 0.08);
+  clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+  transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+.nav-cta:hover {
+  background: rgba(0, 229, 255, 0.2);
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.35), inset 0 0 12px rgba(0, 229, 255, 0.1);
+  transform: translateY(-1px);
 }
 
  
@@ -90,7 +128,6 @@ header img{
  
 .hero h1 {
   font-size: 4rem;
-  font-weight: 900;
   text-transform: uppercase;
 }
  
@@ -108,10 +145,10 @@ header img{
   align-items: center;
   text-align: center;
 }
+
  
 .content h2 {
   font-size: 3rem;
-  font-weight: 900;
   text-transform: uppercase;
 }
  
@@ -177,57 +214,83 @@ header img{
 }
 
 
-.sticky-feature {
-  
+.fonctionnalites .sticky-feature {
   position: sticky;
-  height: 100vh; 
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 24px;
+  padding: 16px 20px;
   box-sizing: border-box;
-  width: 50vw;
-}
-
-
-#Fonctionnalites-1 {
-  background-color: var(--bleu-nuit);
-  border-radius: 5%;
+  width: 75vw;
+  border-radius: 32px;
   top: 10vh;
   margin: 24px;
-  
 }
 
-#Fonctionnalites-2 {
-  background-color: var(--bleu-sarcelle);
-  border-radius: 5%;
-  top: 13vh;
-  margin: 24px;
-}
-
-#Fonctionnalites-3 {
+.feature-card--nuit {
   background-color: var(--bleu-nuit);
-  border-radius: 5%;
-  top: 16vh;
-  margin: 24px;
 }
 
+.feature-card--sarcelle {
+  background-color: var(--bleu-sarcelle);
+}
 
-.conteneur-text {
+.fonctionnalites .conteneur-text {
   flex: 1;
-  max-width: 500px;
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  padding: 0 32px;
 }
 
-.conteneur-img {
+.fonctionnalites .feature-title {
+  background: url('Bloc-Phrase-Header.png') no-repeat center / contain;
+  width: 100%;
+  aspect-ratio: 746 / 234;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.fonctionnalites .feature-title h2 {
+  margin: 0;
+  text-align: center;
+  color: var(--blanc);
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.fonctionnalites .feature-description {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.fonctionnalites .feature-description p {
+  margin: 0;
+  color: var(--blanc);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.fonctionnalites .conteneur-img {
   flex: 1;
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
-.conteneur-img img {
-  max-height: 70vh;
+.fonctionnalites .conteneur-img img {
   width: auto;
-
+  height: 100%;
+  padding: 5%;
 }
  
 
@@ -342,7 +405,6 @@ header img{
 .download-content h2 {
     font-size: 42px; 
     margin-bottom: 20px;
-    font-weight: 700;
     line-height: 1.2;
     color: var(--blanc);
 }
@@ -397,7 +459,6 @@ header img{
 #team-title {
     font-size: 32px; 
     margin-bottom: 40px;
-    font-weight: 700;
     letter-spacing: 0.5px;
     position: relative;
 }
@@ -445,7 +506,6 @@ header img{
 .team-card h4 {
     font-size: 19px; 
     margin: 10px 0 5px 0;
-    font-weight: 700;
 }
 
 .team-role {
@@ -474,7 +534,6 @@ footer {
 .footer-content h2 {
   color: white;
   font-size: 3rem;
-  font-weight: 900;
   text-transform: uppercase;
 }
  
