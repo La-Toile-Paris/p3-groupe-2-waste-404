@@ -24,36 +24,40 @@ body {
     --bleu-nuit: #01202B;
     --blanc: #FFF;
 
+/* NAVBAR */
+nav {
+  height: 80px;
+  background: linear-gradient(to right, var(--bleu-nuit), var(--bleu-sarcelle));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+ 
+.logo {
+  
+  font-size: 32px;
+  font-weight: bold;
+}
 
+nav img{
+    width: 200px;
+    
+}
 
-    /* NAVBAR */
-    nav {
-        height: 80px;
-        background: linear-gradient(to right, var(--bleu-nuit), var(--bleu-sarcelle));
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 40px;
-    }
+ 
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+ 
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
+}
 
-    .logo {
-        color: white, ;
-        font-size: 2rem;
-        font-weight: bold;
-    }
-
-    .nav-links {
-        display: flex;
-        gap: 30px;
-    }
-
-    .nav-links a {
-        text-decoration: none;
-        color: white;
-        font-size: 0.9rem;
-        background-color: #000;
-        border-radius: 2000px;
-    }
+    
 
     /* HEADER */
     header {
@@ -122,18 +126,41 @@ body {
 
 
     /* CONTEXTE */
-    .contexte {
-        background: var(--bleu-sarcelle);
-    }
+  #Contexte{
+  height: 100vh;
+  background-color: var(--bleu-nuit);
+}
 
-    .contexte h2 {
-        color: var(--Dark-Amethyst);
-    }
+#Contexte h1{
+  margin: 0px;
+  text-align: center;
+}
 
-    .contexte p {
-        color: #8a00ff;
-    }
+#Contexte img{
+  width: 650px;
+  padding: 46px;
+}
 
+ .container-glo{
+  
+  display: flex;
+ }
+
+ .context-text{
+  color: var(--blanc);
+  
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px;
+  font-size: medium;
+ }
+
+
+
+
+ 
     /* CIBLES */
     .section.pour-qui {
         text-align: center;

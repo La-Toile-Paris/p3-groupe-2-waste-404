@@ -37,8 +37,8 @@ nav {
 }
  
 .logo {
-  color: green ;
-  font-size: 2rem;
+   
+  font-size: 32px;
   font-weight: bold;
 }
 
@@ -173,6 +173,7 @@ header img{
   display: flex;
   flex-direction: column;
   position: relative;
+  height: 100vh;
 }
 
 
