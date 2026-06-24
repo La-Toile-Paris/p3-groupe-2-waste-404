@@ -20,409 +20,728 @@ body {
     --bleu-sarcelle: #048BA8;
     --bleu-nuit: #01202B;
     --blanc: #FFF;
+}
 
 /* NAVBAR */
 nav {
-  height: 80px;
-  background: linear-gradient(to right, var(--bleu-nuit), var(--bleu-sarcelle));
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 40px;
+    height: 80px;
+    background: linear-gradient(to right, var(--bleu-nuit), var(--bleu-sarcelle));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
 }
- 
+
 .logo {
-  
-  font-size: 32px;
-  font-weight: bold;
+
+    font-size: 32px;
+    font-weight: bold;
 }
 
-nav img{
+nav img {
     width: 200px;
-    
+
 }
 
- 
+
 .nav-links {
-  display: flex;
-  gap: 30px;
+    display: flex;
+    gap: 30px;
 }
- 
+
 .nav-links a {
-  text-decoration: none;
-  color: white;
-  font-size: 0.9rem;
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
 }
 
-    
 
-    /* HEADER */
-    header {
-        height: calc(100vh - 80px);
-        background: var(--bleu-nuit);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+
+/* HEADER */
+
+/* --- Style du Header global --- */
+.main-header {
+    background: #01202B;
+    padding: 80px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    height: 80vh;
+}
+
+.container-glo {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* --- Agencement Flexbox --- */
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    /* Espace entre le texte et l'image */
+}
+
+/* --- Partie Texte --- */
+.context-text {
+    flex: 1;
+}
+
+.context-text h1 {
+    font-size: 2.8rem;
+    color: white;
+    line-height: 1.2;
+    margin-0: 0 0 20px 0;
+    font-weight: 800;
+}
+
+.context-text .subtitle {
+    font-size: 1.15rem;
+    color: whitesmoke;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* --- Bouton d'action --- */
+.btn-primary {
+    display: inline-block;
+    background-color: #2e7d32;
+    /* Vert éco en accord avec tes cartes */
+    color: #ffffff;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #215d25;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(46, 125, 50, 0.3);
+}
+
+/* --- Partie Image --- */
+.context-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.context-image img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 24px;
+    /* Bords très arrondis style app moderne */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    /* Ombre douce */
+    transform: rotate(-1deg);
+    /* Léger effet de style (optionnel) */
+    transition: transform 0.3s ease;
+}
+
+.context-image img:hover {
+    transform: rotate(0deg) scale(1.02);
+    /* S'aligne et grossit au survol */
+}
+
+/* --- Responsive (Tablettes et Mobiles) --- */
+@media (max-width: 768px) {
+    .main-header {
+        padding: 50px 20px;
     }
 
-    .hero {
+    .hero-content {
+        flex-direction: column-reverse;
+        /* Met l'image au-dessus du texte sur mobile */
+        gap: 35px;
         text-align: center;
-        color: var(--bleu-sarcelle);
     }
 
-    .hero h1 {
-        position: absolute;
-        font-size: 3rem;
-        margin-top: 40px;
-        margin-left: 162px;
-        text-transform: uppercase;
+    .context-text h1 {
+        font-size: 2.2rem;
     }
 
-    #ImgBloc {
-        position: relative;
+    .context-image img {
+        max-width: 80%;
+        transform: none;
+        /* On enlève la rotation sur mobile */
     }
 
-    .button {
-        color: black;
-        background-color: #048BA8;
-        border-radius: 62px;
+    .context-image img:hover {
+        transform: none;
     }
-
-
-    .hero p {
-        margin-top: 10px;
-        font-size: 1rem;
-        text-transform: uppercase;
-    }
-
-
-    .section {
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    .content h2 {
-        font-size: 3rem;
-        text-transform: uppercase;
-    }
-
-    .content p,
-    .content span {
-        font-size: 1rem;
-        text-transform: uppercase;
-    }
-
-
-
-
-
-
-    /* CONTEXTE */
-  #Contexte{
-  height: 100vh;
-  background-color: var(--bleu-nuit);
 }
 
-#Contexte h1{
-  margin: 0px;
-  text-align: center;
+
+/* CONTEXTE */
+#Contexte {
+    height: 100vh;
+    background-color: var(--bleu-nuit);
 }
 
-#Contexte img{
-  width: 650px;
-  padding: 46px;
+#Contexte h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
- .container-glo{
-  
-  display: flex;
- }
+#Contexte img {
+    width: 650px;
+    padding: 46px;
+}
 
- .context-text{
-  color: var(--blanc);
-  
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 8px;
-  padding: 24px;
-  font-size: medium;
- }
+.container-glo {
+
+    display: flex;
+}
+
+.context-text {
+    color: var(--blanc);
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px;
+    font-size: medium;
+}
 
 
 
 
- 
-    /* CIBLES */
-    .cibles {
-        padding: 80px 10%;
-        background: #01202B;
-    }
 
-    .section.pour-qui h2 {
-        font-size: 40px;
-        color: #000;
-        margin-bottom: 40px;
-        margin-right: 160px;
-    }
+/* CIBLES */
+/* --- Base section --- */
+.pour-qui {
+    background-color: #048BA8;
+    /* Fond légèrement gris pour faire ressortir la carte */
+    padding: 60px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-    .persona-info {
-        flex: 1;
-        background: rgba(255, 255, 255, 0.08);
-        padding: 40px;
-        border-radius: 30px;
-        color: white;
-    }
+.pour-qui h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
-    .persona-info h3 {
-        margin-top: 25px;
-        margin-bottom: 10px;
-        font-size: 1.8rem;
-    }
+.pour-qui .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
 
-    .persona-info ul {
-        list-style: none;
-        padding: 0;
-    }
+.content h2 {
+    text-align: center;
+}
 
-    .persona-info li {
-        margin: 10px 0;
-        position: relative;
-        padding-left: 20px;
-    }
+/* --- La Carte Persona --- */
+.persona-card {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    /* Ombre douce */
+    overflow: hidden;
+    /* Pour que l'image respecte les bords arrondis */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    .persona-info li::before {
-        content: "●";
-        color: #5b6cff;
-        position: absolute;
-        left: 0;
+/* Effet de survol sympa */
+.persona-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* --- Partie Image --- */
+.persona-image {
+    flex: 0 0 40%;
+    /* Prend 40% de la largeur */
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.persona-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Évite de déformer l'image */
+    display: block;
+}
+
+/* --- Partie Contenu Texte --- */
+.persona-content {
+    flex: 1;
+    /* Prend le reste de l'espace (60%) */
+    padding: 40px;
+}
+
+.persona-content h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin: 0 0 8px 0;
+}
+
+/* Petit badge stylisé pour le rôle */
+.persona-badge {
+    display: inline-block;
+    background-color: #e8f5e9;
+    /* Vert très clair */
+    color: #2e7d32;
+    /* Vert éco */
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.persona-description {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- Responsive (Mobile) --- */
+@media (max-width: 600px) {
+    .persona-card {
+        flex-direction: column;
+        /* On empile l'image et le texte sur mobile */
     }
 
     .persona-image {
-        position: relative;
-        width: 350px;
-        border-radius: 30px;
-        overflow: hidden;
-    }
-
-    .persona-image img {
+        flex: 0 0 100%;
         width: 100%;
-        height: 100%;
-        display: block;
-        object-fit: cover;
+        height: 200px;
     }
 
-    .persona-footer {
-        position: absolute;
-        bottom: 20px;
-        left: 20px;
-        right: 20px;
-        padding: 15px 20px;
-        border-radius: 20px;
-        backdrop-filter: blur(10px);
-        background: rgba(0, 0, 0, 0.35);
-        color: white;
-    }
-
-    .persona-footer h4 {
-        margin: 0;
-        font-size: 1.5rem;
-    }
-
-    .persona-footer p {
-        margin-top: 5px;
-        opacity: 0.8;
-    }
-
-    /*-------- EVOLUTIONS--------------- */
-
-
-    .evolutions {
-        background-color: #048BA8;
-    }
-
-    .cards {
-        display: flex;
-        justify-content: center;
-        gap: 52px;
-
-        /* espace entre les cards */
-        flex-wrap: wrap;
-    }
-
-    .card {
-        display: flex;
-        justify-content: center;
-        margin-top: 120px;
-        width: 300px;
-        padding: 12px;
-        background: #01202B;
-        border-radius: 16px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-    }
-
-    .card img {
-        width: 100%;
-        display: block;
-        border-radius: 12px;
-    }
-
-    /* ------AVENIR------- */
-    /* Style de la carte principale */
-    .neon-card {
-        background: #0d111a;
-        /* Fond sombre qui se fond avec le noir de l'image */
-        border: 1px solid rgba(81, 166, 255, 0.3);
-        /* Bordure bleue subtile */
-        border-radius: 20px;
-        width: 340px;
-        overflow: hidden;
-        /* Pour que l'image respecte les bords arrondis */
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6),
-            0 0 25px rgba(44, 122, 255, 0.15);
-        /* Effet de halo lumineux */
-        font-family: 'Inter', sans-serif;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    /* Effet au survol de la carte (Optionnel) */
-    .neon-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7),
-            0 0 35px rgba(81, 166, 255, 0.3);
-    }
-
-    /* Conteneur de l'image */
-    .card-image-container {
-        width: 100%;
-        height: 240px;
-        /* Ajuste la hauteur selon tes besoins */
-        overflow: hidden;
-    }
-
-    /* Gestion de l'image pour qu'elle remplisse bien son espace */
-    .card-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        /* Recadre proprement l'image sans la déformer */
-        display: block;
-    }
-
-    /* Conteneur du texte */
-    .card-content {
+    .persona-content {
         padding: 24px;
-    }
-
-    .card h3 {
-        color: #222;
-    }
-
-    /* Paragraphe sous l'image */
-    .card-content p {
-        color: #8a93a6;
-        font-size: 0.95rem;
-        line-height: 1.5;
-    }
-
-    /* Style de la carte principale */
-    .dev-card {
-        background: #0a0b10;
-        /* Fond très sombre adapté aux tons de l'image */
-        border: 1px solid rgba(168, 85, 247, 0.25);
-        /* Bordure violette subtile */
-        border-radius: 20px;
-        width: 350px;
-        overflow: hidden;
-        /* Pour couper proprement l'image sur les bords arrondis */
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7),
-            0 0 30px rgba(168, 85, 247, 0.15);
-        /* Halo lumineux violet */
-        font-family: 'Inter', sans-serif;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    /* Effet au survol (Hover) */
-    .dev-card:hover {
-        transform: translateY(-5px);
-        border-color: rgba(59, 130, 246, 0.4);
-        /* Passe au bleu électrique au survol */
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8),
-            0 0 35px rgba(59, 130, 246, 0.25);
-        /* Halo bleu au survol */
-    }
-
-    /* Conteneur de l'image */
-    .card-image-container {
-        width: 100%;
-        height: 220px;
-        /* Hauteur idéale pour le ratio de cette image */
-        overflow: hidden;
-    }
-
-    /* Gestion de l'image */
-    .card-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        /* Permet de remplir l'espace sans déformer l'illustration */
-        display: block;
-    }
-
-    /* Conteneur du texte */
-    .card-content {
-        padding: 24px;
-    }
-
-    /* Titre sous l'image */
-    .card-content h3 {
-        color: #ffffff;
-        font-size: 1.35rem;
-        font-weight: 600;
-        margin-bottom: 12px;
-        letter-spacing: -0.5px;
-    }
-
-    /* Paragraphe sous l'image */
-    .card-content p {
-        color: #94a3b8;
-        /* Gris ardoise clair pour une super lisibilité */
-        font-size: 0.95rem;
-        line-height: 1.6;
-    }
-
-
-
-    /* ------FOOTER------ */
-
-    footer {
-        height: 180px;
-        background: linear-gradient(to right, var(--bleu-nuit), var(--bleu-sarcelle));
-        border: 4px solid #2196f3;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    .footer-content h2 {
-        color: white;
-        font-size: 3rem;
-        text-transform: uppercase;
-    }
-
-    .footer-content p {
-        color: black;
-        margin-top: 10px;
-        text-transform: uppercase;
     }
 }
 
 
+/* Espace entre les cartes si elles se suivent */
+.persona-card+.persona-card {
+    margin-top: 30px;
+}
+
+/* Couleurs personnalisées pour les badges (optionnel mais recommandé) */
+.badge-green {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.badge-blue {
+    background-color: #e3f2fd;
+    color: #1565c0;
+}
+
+
+
+/*-------- EVOLUTIONS--------------- */
+
+
+/* --- Section Globale --- */
+.section-evolutions {
+    background-color: #ffffff;
+    padding: 80px 20px;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.section-evolutions .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- En-tête --- */
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    color: #1a252f;
+    letter-spacing: 2px;
+    margin: 0 0 10px 0;
+    font-weight: 800;
+}
+
+.section-header p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* --- Grille Responsive --- */
+.evolutions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 colonnes pour les 3 étapes */
+    gap: 40px;
+}
+
+/* --- La Carte Évolution --- */
+.evolution-card {
+    position: relative;
+    /* Pour positionner le numéro de l'étape */
+    background: #048BA8;
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid #eef0f2;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.evolution-card:hover {
+    transform: translateY(-5px);
+    background: #ffffff;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    border-color: #34495e;
+}
+
+/* --- Numéro d'étape stylisé --- */
+.step-number {
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    background: #34495e;
+    /* Couleur sombre pro */
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 10px rgba(52, 73, 94, 0.2);
+    z-index: 2;
+}
+
+/* --- Zone de l'image --- */
+.card-image-wrapper {
+    width: 100%;
+    height: 280px;
+    /* Hauteur fixe pour aligner tes captures d'écran */
+    border-radius: 12px;
+    overflow: hidden;
+    background: #eaeaea;
+    /* Fond de secours */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Utilise 'contain' pour voir toute ta maquette sans la rogner, ou 'cover' selon ton rendu */
+    transition: transform 0.4s ease;
+}
+
+.evolution-card:hover .card-image-wrapper img {
+    transform: scale(1.04);
+    /* Léger effet de focus sur la maquette au survol */
+}
+
+/* --- Textes sous l'image --- */
+.card-info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.card-info h3 {
+    font-size: 1.25rem;
+    color: #2c3e50;
+    margin: 0 0 8px 0;
+}
+
+.card-info p {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+    .evolutions-grid {
+        grid-template-columns: 1fr;
+        /* Une seule colonne sur tablette et mobile */
+        gap: 50px;
+        /* Plus d'espace pour laisser respirer les numéros */
+    }
+
+    .card-image-wrapper {
+        height: 35px;
+        /* On donne un peu plus de hauteur sur mobile si nécessaire */
+        height: 320px;
+    }
+}
+
+/* ------AVENIR------- */
+
+
+/* --- Section Globale --- */
+.section-avenir {
+    background-color: #121824;
+    /* Fond sombre pour faire ressortir le néon */
+    color: #ffffff;
+    padding: 80px 20px;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.section-avenir .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- En-tête --- */
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0 0 10px 0;
+    background: linear-gradient(45deg, #00f2fe, #4facfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Titre dégradé lumineux */
+}
+
+.section-subtitle {
+    color: #707e94;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* --- Grille des Cartes --- */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 colonnes égales */
+    gap: 30px;
+}
+
+/* --- Style de la Carte Néon --- */
+.neon-card {
+    background: #1e2640;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Conteneur Image --- */
+.card-image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* --- Contenu Texte --- */
+.card-content {
+    padding: 25px;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    font-size: 1.3rem;
+    margin: 0 0 12px 0;
+    color: #ffffff;
+}
+
+.card-content p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- Effets au Survol (Hover) --- */
+.neon-card:hover {
+    transform: translateY(-8px);
+    background: #242f50;
+    border-color: #00f2fe;
+    /* Effet de lueur néon bleue */
+    box-shadow: 0 10px 30px rgba(0, 242, 254, 0.2),
+        0 0 15px rgba(0, 242, 254, 0.1);
+}
+
+.neon-card:hover .card-image {
+    transform: scale(1.08);
+    /* Zoom léger sur l'image */
+}
+
+/* Optionnel : Une carte mise en valeur différemment (ex: la BETA en violet/rose) */
+.highlight-neon:hover {
+    border-color: #ff007f;
+    box-shadow: 0 10px 30px rgba(255, 0, 127, 0.2),
+        0 0 15px rgba(255, 0, 127, 0.1);
+}
+
+/* --- Responsive (Tablettes et Mobiles) --- */
+@media (max-width: 992px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 colonnes sur tablette */
+    }
+}
+
+@media (max-width: 650px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+        /* 1 seule colonne sur mobile */
+        gap: 25px;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+}
+
+
+
+/* ------FOOTER------ */
+
+
+/* --- Base du Footer --- */
+.main-footer {
+    background-color: #1a1f2c;
+    /* Fond anthracite très moderne */
+    color: #ecf0f1;
+    padding: 60px 20px 20px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Grille pour aligner les 3 colonnes */
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    /* La première colonne est plus large */
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    /* Ligne de séparation subtile */
+}
+
+/* --- Style des sections/colonnes --- */
+.footer-section h2 {
+    font-size: 1.8rem;
+    margin: 0 0 15px 0;
+    color: #ffffff;
+}
+
+.footer-section h3 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #94a3b8;
+    /* Couleur grise adoucie */
+    margin: 0 0 20px 0;
+}
+
+.footer-section p {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 0 10px 0;
+}
+
+/* --- Liens des Réseaux Sociaux --- */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    /* Alignés verticalement */
+    gap: 12px;
+}
+
+.social-link {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+    width: max-content;
+}
+
+/* Effets au survol (changement de couleur individuel si tu veux) */
+.social-link:hover {
+    transform: translateX(5px);
+    /* Léger décalage vers la droite */
+}
+
+.instagram:hover {
+    color: #e1306c;
+}
+
+.linkedin:hover {
+    color: #0077b5;
+}
+
+.github:hover {
+    color: #00f2fe;
+}
+
+/* --- Bandeau inférieur (Copyright) --- */
+.footer-bottom {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin: 0;
+}
+
+/* --- Responsive (Mobiles) --- */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        /* On passe sur une seule colonne sur mobile */
+        gap: 30px;
+        text-align: center;
+    }
+
+    .social-links {
+        align-items: center;
+        /* Centre les liens sur mobile */
+    }
+
+    .social-link:hover {
+        transform: translateY(-3px);
+        /* Sur mobile, on lève le lien plutôt que le décaler */
+    }
+}
 
 
 
