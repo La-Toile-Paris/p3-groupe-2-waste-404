@@ -5,6 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
   <title>Projet - Documentation</title>
+  <link rel="icon" type="image/svg+xml" href="asset/logo/logo-edison.svg" />
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link href="doc.css" rel="stylesheet" type="text/css" />
 </head>
@@ -12,155 +13,248 @@
 <body>
   <nav class="main-nav">
     <a href="index.html#accueil" class="nav-logo">
-      <img src="asset/Waste_404LogoNav.png" alt="Waste 404">
+      <img class="nav-logo-icon" src="asset/logo/logo-edison.svg" alt="">
+      <span class="nav-logo-text"><span class="nav-logo-accent">R3</span>MIX</span>
     </a>
     <div class="nav-actions">
-      <a href="index.html" class="nav-link">Accueil</a>
+      <a href="index.html" class="nav-link">accueil</a>
       <a target="_blank" href="https://www.figma.com/proto/Yg1JPnP7CUxEsBsc0eBv6f/WASTE-404?node-id=6352-3486&t=ItSNBShxPA9ElTEq-1" class="nav-cta">Télécharger</a>
     </div>
   </nav>
   
-  <header>
-    <section id="Contexte">
-    <div class="container-glo">
-      <div class="context-text">
-      <h1>Contexte</h1>
-        <p>Chaque année, des millions d'objets encore utilisables sont jetés. Pour lutter contre ce gaspillage, notre application facilite le don, la revente et le recyclage des textiles, meubles et objets du quotidien. Ensemble, donnons une seconde vie à ce qui ne sert plus.</p>
-      </div>
-        <img src="asset/ChatGPT Image 22 juin 2026, 03_40_46.png">
-       </div> 
+  <header class="doc-header">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hud-frame" aria-hidden="true">
+      <span class="hud-corner hud-corner--tl"></span>
+      <span class="hud-corner hud-corner--tr"></span>
+      <span class="hud-corner hud-corner--bl"></span>
+      <span class="hud-corner hud-corner--br"></span>
+      <span class="hud-tag hud-tag--left">DOC//R3MIX</span>
+      <span class="hud-tag hud-tag--right">v4.04</span>
+    </div>
 
-  </section>
+    <div class="doc-header-inner">
+      <div class="doc-intro">
+        <p class="doc-eyebrow">// DOCUMENTATION</p>
+        <h1>Le dossier <span class="accent">R3MIX</span></h1>
+        <p class="doc-lead">Comment l'application fonctionne, pour qui elle est pensée et où elle va. Un tour d'horizon clair&nbsp;: ici on explique, on ne vend pas.</p>
+        <div class="doc-meta" aria-hidden="true">
+          <span>MISE À JOUR · 2026</span>
+          <span>LECTURE ~4 MIN</span>
+          <span>STATUS · LIVE</span>
+        </div>
+        <nav class="doc-toc" aria-label="Sommaire">
+          <a href="#constat">01&nbsp;· Constat</a>
+          <a href="#pourquoi">02&nbsp;· Pourquoi</a>
+          <a href="#pour-qui">03&nbsp;· Pour qui</a>
+          <a href="#evolutions">04&nbsp;· Évolutions</a>
+          <a href="#avenir">05&nbsp;· Avenir</a>
+          <a href="#equipe">06&nbsp;· Équipe</a>
+        </nav>
+        <a href="#constat" class="doc-scroll" aria-hidden="true">Commencer la lecture ↓</a>
+      </div>
+    </div>
   </header>
-  <main>
 
-    <section class="section contexte">
-      <div class="content">
-        <h2>POURQUOI WASTE 404 ?</h2>
-        <p>WASTE 404 permet à :</p>
-      </div>
-    </section>
+  <main class="doc-main">
 
- 
-
-    <section class="section pour-qui">
-      <h2>POUR QUI ?</h2>
-      <div class="card">
-        <div class="texte">
-          <h3>Thomas, 35 ans, Parisien</h3>
+    <article class="doc-section" id="constat">
+      <header class="doc-section-head">
+        <span class="doc-num">01</span>
+        <h2>Le constat</h2>
+      </header>
+      <div class="doc-body doc-body--split">
+        <div class="doc-text-col">
+          <p class="doc-text">Chaque année, des millions d'objets encore utilisables sont jetés. Pour lutter contre ce gaspillage, R3MIX facilite le don, la revente et le recyclage des textiles, meubles et objets du quotidien.</p>
+          <p class="doc-text">L'idée est simple&nbsp;: redonner une seconde vie à ce qui ne sert plus, sans effort et sans culpabilité. On scanne, l'app propose, on agit.</p>
         </div>
+        <figure class="doc-figure">
+          <span class="doc-frame-corner doc-frame-corner--tl" aria-hidden="true"></span>
+          <span class="doc-frame-corner doc-frame-corner--tr" aria-hidden="true"></span>
+          <span class="doc-frame-corner doc-frame-corner--bl" aria-hidden="true"></span>
+          <span class="doc-frame-corner doc-frame-corner--br" aria-hidden="true"></span>
+          <img src="asset/doc/header-context.png" alt="Étude : 70% des Français gaspillent">
+          <figcaption>Source · étude 2026</figcaption>
+        </figure>
+      </div>
+    </article>
 
-        <div class="persona-image">
-          <img src="asset/Sarah.png" alt="Sarah">
+    <article class="doc-section" id="pourquoi">
+      <header class="doc-section-head">
+        <span class="doc-num">02</span>
+        <h2>Pourquoi R3MIX&nbsp;?</h2>
+      </header>
+      <div class="doc-body">
+        <p class="doc-text">Parce que jeter est devenu un réflexe. R3MIX transforme ce réflexe en trois gestes utiles&nbsp;:</p>
+        <ul class="doc-list">
+          <li><strong>Scanner</strong> — identifier en un instant la matière et l'état d'un objet.</li>
+          <li><strong>Remixer</strong> — recevoir des idées concrètes pour le réparer ou le transformer.</li>
+          <li><strong>Revendre</strong> — donner ou vendre ce qui peut encore servir à quelqu'un.</li>
+        </ul>
+      </div>
+    </article>
 
-          <div class="persona-footer">
-            <h4>Sarah, 22 ans</h4>
-            <p>Jeune active éco-responsable</p>
+    <article class="doc-section" id="pour-qui">
+      <header class="doc-section-head">
+        <span class="doc-num">03</span>
+        <h2>Pour qui&nbsp;?</h2>
+      </header>
+      <div class="doc-body doc-body--split">
+        <div class="doc-text-col">
+          <p class="doc-text">R3MIX s'adresse à celles et ceux qui veulent consommer autrement&nbsp;: bricoleurs, créatifs, ou simplement curieux de donner du sens à leurs objets.</p>
+          <p class="doc-text">Notre persona type&nbsp;: une jeune active éco-responsable, à l'aise avec son téléphone, qui n'a ni le temps ni les outils d'un atelier, mais beaucoup d'envie.</p>
+        </div>
+        <figure class="doc-figure doc-figure--persona color-effect">
+          <span class="doc-frame-corner doc-frame-corner--tl" aria-hidden="true"></span>
+          <span class="doc-frame-corner doc-frame-corner--tr" aria-hidden="true"></span>
+          <span class="doc-frame-corner doc-frame-corner--bl" aria-hidden="true"></span>
+          <span class="doc-frame-corner doc-frame-corner--br" aria-hidden="true"></span>
+          <img src="asset/doc/persona-sarah.png" alt="Sarah, 22 ans">
+          <figcaption><strong>Sarah, 22 ans</strong>Jeune active éco-responsable</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="doc-section" id="evolutions">
+      <header class="doc-section-head">
+        <span class="doc-num">04</span>
+        <h2>Évolutions</h2>
+      </header>
+      <p class="doc-text doc-text--intro">Du croquis papier à l'interface finale, voici comment le design de R3MIX a mûri.</p>
+      <div class="doc-gallery">
+        <figure class="doc-figure">
+          <span class="doc-frame-corner doc-frame-corner--tl" aria-hidden="true"></span>
+          <span class="doc-frame-corner doc-frame-corner--tr" aria-hidden="true"></span>
+          <span class="doc-frame-corner doc-frame-corner--bl" aria-hidden="true"></span>
+          <span class="doc-frame-corner doc-frame-corner--br" aria-hidden="true"></span>
+          <img src="asset/doc/wireframe.png" alt="Wireframe papier">
+          <figcaption>01 · Wireframe papier</figcaption>
+        </figure>
+        <figure class="doc-figure">
+          <span class="doc-frame-corner doc-frame-corner--tl" aria-hidden="true"></span>
+          <span class="doc-frame-corner doc-frame-corner--tr" aria-hidden="true"></span>
+          <span class="doc-frame-corner doc-frame-corner--bl" aria-hidden="true"></span>
+          <span class="doc-frame-corner doc-frame-corner--br" aria-hidden="true"></span>
+          <img src="asset/doc/phase1-accueil.png" alt="Première version claire">
+          <figcaption>02 · Première version</figcaption>
+        </figure>
+        <figure class="doc-figure">
+          <span class="doc-frame-corner doc-frame-corner--tl" aria-hidden="true"></span>
+          <span class="doc-frame-corner doc-frame-corner--tr" aria-hidden="true"></span>
+          <span class="doc-frame-corner doc-frame-corner--bl" aria-hidden="true"></span>
+          <span class="doc-frame-corner doc-frame-corner--br" aria-hidden="true"></span>
+          <img src="asset/doc/accueil-final.png" alt="Version sombre finale">
+          <figcaption>03 · Version finale</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="doc-section" id="avenir">
+      <header class="doc-section-head">
+        <span class="doc-num">05</span>
+        <h2>Avenir</h2>
+      </header>
+      <p class="doc-text doc-text--intro">Ce qui arrive dans les prochaines versions de R3MIX.</p>
+      <div class="doc-roadmap">
+        <article class="doc-card">
+          <div class="doc-card-media color-effect">
+            <img src="asset/doc/signalement.jpeg" alt="Fonctionnalité de signalement">
           </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="evolutions">
-      <h1 class="section-heading">ÉVOLUTIONS</h1>
-      <div class="cards">
-        <div class="card">
-          <img src="asset/PapierFrame (1).png" alt="Wireframe">
-        </div>
-        <div class="card">
-          <img src="asset/Phase1_Accueil.png" alt="Version claire">
-        </div>
-        <div class="card">
-          <img src="asset/Accueil_final.png" alt="Version sombre">
-        </div>
-      </div>
-    </section>
-    <section class="section contexte">
-      <div class="content">
-        <h2>AVENIR</h2>
-      </div>
-      <div class="neon-card">
-        <!-- Conteneur pour l'image -->
-        <div class="card-image-container">
-          <img src="Signalement.jpeg" alt="Alerte Néon" class="card-image">
-        </div>
-
-        <!-- Conteneur pour le texte en dessous -->
-        <div class="card-content">
-          <h3>Signalement</h3>
-          <p>Ajout d'une fonctionnalité de Signalement.</p>
-        </div>
-      </div>
-      <div class="dev-card">
-        <!-- Conteneur pour l'image -->
-        <div class="card-image-container">
-          <img src="asset/Contact-Dev.jpeg" alt="App Development" class="card-image">
-        </div>
-
-        <!-- Conteneur pour le texte en dessous -->
-        <div class="card-content">
-          <h3>App Development 2026</h3>
-          <p>Explore high-performance mobile engineering. Build seamless, modern interfaces with powerful backend
-            systems and glassmorphic designs.</p>
-        </div>
-      </div>
-      </section>
-
-      <section id="team-section">
-        <div class="team-container">
-          <h1 id="team-title" class="section-heading">L'équipe derrière Waste404</h1>
-          <div class="team-grid">
-            <div class="team-card">
-              <div class="testimonial-photo team-photo">
-                <img src="asset/87c9657e01e92c40a8dbd4ad7228b043_400x400.png" alt="Hakime" class="avatar">
-              </div>
-              <h4>Hakime</h4>
-              <p class="team-role">Dev web</p>
-            </div>
-            <div class="team-card">
-              <div class="testimonial-photo team-photo">
-                <img src="asset/couvsiteluffy.png" alt="Mohamed" class="avatar">
-              </div>
-              <h4>Mohamed</h4>
-              <p class="team-role">Dev web esprit kaizen</p>
-            </div>
-            <div class="team-card">
-              <div class="testimonial-photo team-photo">
-                <img src="asset/Gemini_Generated_Image_l7ln7l7ln7l7ln7l.png" alt="Serigne" class="avatar">
-              </div>
-              <h4>Serigne</h4>
-              <p class="team-role">Tech lead</p>
-            </div>
-            <div class="team-card">
-              <div class="testimonial-photo team-photo">
-                <img src="asset/5418462046432047.jpg" alt="Ydriss" class="avatar">
-              </div>
-              <h4>Ydriss</h4>
-              <p class="team-role">Designer</p>
-            </div>
-            <div class="team-card">
-              <div class="testimonial-photo team-photo">
-                <img src="asset/Error_404.png" alt="Anis" class="avatar">
-              </div>
-              <h4>Anis</h4>
-              <p class="team-role">errror</p>
-            </div>
+          <div class="doc-card-body">
+            <span class="doc-card-tag">À VENIR</span>
+            <h3>Signalement</h3>
+            <p>Repérer et signaler les dépôts sauvages pour orienter les objets récupérables vers les bons utilisateurs.</p>
           </div>
-        </div>
-      </section>
-
-    </main>
-
-  <footer>
-    <div class="footer-content">
-      <h2>Contact</h2>
-
-      <div class="socials">
-        <a href="#">Instagram</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">GitHub</a>
+        </article>
+        <article class="doc-card">
+          <div class="doc-card-media color-effect">
+            <img src="asset/doc/contact-dev.jpeg" alt="Développement de l'application">
+          </div>
+          <div class="doc-card-body">
+            <span class="doc-card-tag">2026</span>
+            <h3>App native</h3>
+            <p>Une version mobile native, plus rapide et plus fluide, avec un back-end robuste et une interface soignée.</p>
+          </div>
+        </article>
       </div>
+    </article>
+
+    <article class="doc-section" id="equipe">
+      <header class="doc-section-head">
+        <span class="doc-num">06</span>
+        <h2>L'équipe derrière R3MIX</h2>
+      </header>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-photo color-effect">
+            <img src="asset/team/hakime.png" alt="Hakime">
+          </div>
+          <h4>Hakime</h4>
+          <p class="team-role">Dev web</p>
+        </div>
+        <div class="team-card">
+          <div class="team-photo color-effect">
+            <img src="asset/team/mohamed.png" alt="Mohamed">
+          </div>
+          <h4>Mohamed</h4>
+          <p class="team-role">Dev web · kaizen</p>
+        </div>
+        <div class="team-card">
+          <div class="team-photo color-effect">
+            <img src="asset/team/serigne.png" alt="Serigne">
+          </div>
+          <h4>Serigne</h4>
+          <p class="team-role">Tech lead</p>
+        </div>
+        <div class="team-card">
+          <div class="team-photo color-effect">
+            <img src="asset/team/ydriss.jpg" alt="Ydriss">
+          </div>
+          <h4>Ydriss</h4>
+          <p class="team-role">Designer</p>
+        </div>
+        <div class="team-card">
+          <div class="team-photo color-effect">
+            <img src="asset/home/error-404.png" alt="Anis">
+          </div>
+          <h4>Anis</h4>
+          <p class="team-role">Dev web</p>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html#accueil" class="footer-logo">
+          <img class="footer-logo-icon" src="asset/logo/logo-edison.svg" alt="">
+          <span class="footer-logo-text"><span class="footer-accent">R3</span>MIX</span>
+        </a>
+        <p class="footer-tagline">Rien ne se perd, tout se remixe.</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Navigation">
+        <h3>Navigation</h3>
+        <a href="index.html#accueil">Accueil</a>
+        <a href="doc.html">Documentation</a>
+        <a target="_blank" href="https://www.figma.com/proto/Yg1JPnP7CUxEsBsc0eBv6f/WASTE-404?node-id=6352-3486&t=ItSNBShxPA9ElTEq-1">Télécharger</a>
+      </nav>
+
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <div class="footer-socials">
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 R3MIX — Tous droits réservés</span>
+      <span class="footer-sys" aria-hidden="true">SYS//R3MIX · v4.04</span>
     </div>
   </footer>
 
