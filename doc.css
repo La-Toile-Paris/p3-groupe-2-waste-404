@@ -101,25 +101,6 @@ nav img {
     margin-bottom: 30px;
 }
 
-/* --- Bouton d'action --- */
-.btn-primary {
-    display: inline-block;
-    background-color: #2e7d32;
-    /* Vert éco en accord avec tes cartes */
-    color: #ffffff;
-    padding: 14px 28px;
-    border-radius: 30px;
-    font-weight: 600;
-    text-decoration: none;
-    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.2);
-    transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-    background-color: #215d25;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(46, 125, 50, 0.3);
-}
 
 /* --- Partie Image --- */
 .context-image {
@@ -214,29 +195,127 @@ nav img {
 
 /* CIBLES */
 /* --- Base section --- */
+/* --- Style global de la section --- */
 .pour-qui {
-    background-color: #048BA8;
-    /* Fond légèrement gris pour faire ressortir la carte */
     padding: 60px 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bleu-sarcelle);
+    /* Un fond très légèrement teinté (éco) */
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
-.pour-qui h2 {
+.section-title {
     text-align: center;
     font-size: 2rem;
-    color: #333;
+    letter-spacing: 2px;
+    color: #fff;
     margin-bottom: 40px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    position: relative;
 }
 
-.pour-qui .container {
-    max-width: 800px;
-    margin: 0 auto;
+/* Petit trait décoratif sous le titre "CIBLE" */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #0077b5;
+    /* Vert éco, à changer selon ta charte */
+    margin: 10px auto 0;
+    border-radius: 2px;
 }
 
-.content h2 {
+.container h2 {
     text-align: center;
+    font-size: 2rem;
+    color: #FFF;
+}
+
+/* --- La Carte Persona --- */
+.persona-card {
+    display: flex;
+    flex-direction: column;
+    /* Par défaut sur mobile */
+    background: #240046 border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    /* Ombre douce */
+    overflow: hidden;
+    max-width: 700px;
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet au survol de la carte */
+.persona-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Partie Image --- */
+.persona-image-wrapper {
+    position: relative;
+    background-color: #240046;
+    /* Fond de secours si l'image charge pas */
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.persona-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.persona-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Le Badge Actifs & Éco-responsables */
+.persona-badge {
+    align-self: flex-start;
+    background-color: #240046;
+    color: #2e7d32;
+    /* Vert textuel */
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 50px;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.persona-content h3 {
+    font-size: 1.5rem;
+    color: #1a252f;
+    margin: 0 0 10px 0;
+}
+
+.persona-description {
+    color: #5a6b7c;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- Version Ordinateur (Responsive) --- */
+@media (min-width: 600px) {
+    .persona-card {
+        flex-direction: row;
+        /* Aligne l'image à gauche et le texte à droite */
+    }
+
+    .persona-image-wrapper {
+        flex: 0 0 40%;
+        /* L'image prend 40% de la largeur */
+        min-height: auto;
+    }
 }
 
 /* --- La Carte Persona --- */
@@ -350,7 +429,7 @@ nav img {
 
 /* --- Section Globale --- */
 .section-evolutions {
-    background-color: #ffffff;
+    background-color: #240046;
     padding: 80px 20px;
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
@@ -628,10 +707,9 @@ nav img {
 
 /* ------FOOTER------ */
 
-
 /* --- Base du Footer --- */
 .main-footer {
-    background-color: #1a1f2c;
+    background-color: #240046;
     /* Fond anthracite très moderne */
     color: #ecf0f1;
     padding: 60px 20px 20px 20px;
@@ -742,7 +820,6 @@ nav img {
         /* Sur mobile, on lève le lien plutôt que le décaler */
     }
 }
-
 
 
 
