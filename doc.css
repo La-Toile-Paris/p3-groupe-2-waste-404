@@ -492,6 +492,25 @@ body {
   background: #01151d;
 }
 
+.doc-gallery {
+  display: grid;
+  /* Crée 2 colonnes de largeur égale (1fr chacune) */
+  grid-template-columns: repeat(2, 1fr);
+
+  /* Ajoute un espace entre les lignes et les colonnes (ajuste la valeur selon tes besoins) */
+  gap: 20px;
+
+  width: 100%;
+}
+
+/* Optionnel : Assure-toi que les images s'adaptent bien à leurs cases */
+.doc-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
 /* ---------- Cartes roadmap (Avenir) ---------- */
 .doc-roadmap {
   display: grid;
