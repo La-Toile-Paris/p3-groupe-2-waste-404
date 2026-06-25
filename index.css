@@ -20,6 +20,7 @@ header {
     radial-gradient(90% 70% at 12% 90%, rgba(0, 229, 255, 0.12), transparent 55%),
     linear-gradient(160deg, #021016 0%, var(--bleu-nuit) 55%, #010c12 100%);
   overflow: hidden;
+  height: 100vh;
 }
 
 .hero {
@@ -597,6 +598,7 @@ header {
   height: var(--section-height);
   background-color: var(--bleu-nuit);
   box-sizing: border-box;
+  height: 100vh;
 }
 
 #Contexte h1 {
